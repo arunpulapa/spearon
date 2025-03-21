@@ -1,0 +1,98 @@
+<div class="container mt-4">
+    <!-- Breadcrumb -->
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="card1 breadcrumb p-3 mb-3">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Virtual Call Center</a></li>
+      <li class="breadcrumb-item active text-danger" aria-current="page">Calls Complete Report</li>
+    </ol>
+  </nav>
+  
+  
+    <!-- Header Section -->
+    <div class="cardd p-3 mb-3">
+        <div class="row align-items-center">
+          <!-- Left Side (Title) -->
+          <div class="col-md-6">
+            <h5 class="text-danger">
+              Calls Complete Report <i class="fa fa-refresh"></i>
+            </h5>
+            <p class="text-muted">You have a good internet!!</p>
+          </div>
+      
+          <!-- Right Side (Export Button) -->
+          <div class="col-md-6 text-end">
+            <button class="export-btn">
+              <i class="fa fa-file-excel"></i> Export
+            </button>
+          </div>
+        </div>
+      </div>
+      
+  
+    <!-- Filter Section -->
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label class="form-label">Dialer List</label>
+        <select class="form-select">
+          <option>All</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">From Date</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">To Date</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="col-md-2 d-flex align-items-end">
+        <button class="btn btn-primary w-100">Search..</button>
+      </div>
+    </div>
+  
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr>
+              <th *ngFor="let header of headers">{{ header }}</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th><input type="text" class="form-control" placeholder="Search Sales Executive" (input)="applyFilter('salesExecutive', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Caller Name" (input)="applyFilter('callerName', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Caller Number" (input)="applyFilter('callerNumber', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Call Status" (input)="applyFilter('callStatus', $event)"></th>
+              <th></th>
+              <th></th>
+              <th><input type="text" class="form-control" placeholder="Search Duration" (input)="applyFilter('duration', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Call Type" (input)="applyFilter('callType', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Status" (input)="applyFilter('status', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Sub Call Status" (input)="applyFilter('subCallStatus', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Duration" (input)="applyFilter('dispositionDuration', $event)"></th>
+              <th><input type="text" class="form-control" placeholder="Search Notes" (input)="applyFilter('notes', $event)"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let call of filteredRecords; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ call.salesExecutive }}</td>
+              <td>{{ call.callerName }}</td>
+              <td>{{ call.callerNumber }}</td>
+              <td>{{ call.callStatus }}</td>
+              <td><button class="btn btn-sm btn-info"><i class="fa fa-download"></i></button></td>
+              <td>{{ call.file }}</td>
+              <td>{{ call.duration }}</td>
+              <td>{{ call.callType }}</td>
+              <td>{{ call.status }}</td>
+              <td>{{ call.subCallStatus }}</td>
+              <td>{{ call.dispositionDuration }}</td>
+              <td>{{ call.notes }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  

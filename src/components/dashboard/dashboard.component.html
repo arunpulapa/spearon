@@ -1,0 +1,136 @@
+<div class="dashboard-container">
+    <h2 class="dashboard-title">Dashboard</h2>
+  
+    <div class="stats-container">
+      <mat-card *ngFor="let stat of stats" class="stat-card">
+        <mat-card-content>
+            <div class="card">
+                <h3>{{ stat.value }}</h3>
+          <span class="percentage">{{ stat.percentage }}%</span>
+
+            </div>
+            <p style="font-size: 14px;margin-top: 20px;font-weight: 500;">{{ stat.label }}</p>
+          
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <div class="sections">
+
+        <mat-card class="scheduled-card">
+            <div class="card-header">
+              <span class="title">Operational - Scheduled Calls</span>
+              <div class="">
+                <img style="height: 50px;width: 50px;" src="https://cdn-icons-png.freepik.com/512/2343/2343668.png" alt="Call Icon" class="icon" />
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="item">
+                <strong>42</strong>
+                <span>Dialers</span>
+              </div>
+              <div class="item">
+                <strong>269</strong>
+                <span>Dialing</span>
+              </div>
+              <div class="item">
+                <strong>49438</strong>
+                <span>Inqueue</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="item">
+                <strong>1</strong>
+                <span>Scheduled</span>
+              </div>
+              <div class="item">
+                <strong>1</strong>
+                <span>Dialed</span>
+              </div>
+              <div class="item">
+                <strong>0</strong>
+                <span>Pending</span>
+              </div>
+            </div>
+          </mat-card>
+          
+  
+          <mat-card class="today-calls-container">
+            <div class="today-calls-header">
+              <span class="today-calls-title">Operational - To day Calls</span>
+              <div class="">
+                <img style="height: 50px;width: 50px;" src="https://png.pngtree.com/png-clipart/20190903/original/pngtree-phone-icon-png-image_4422591.jpg" alt="Settings Icon" class="today-calls-icon" />
+              </div>
+            </div>
+          
+            <div class="today-calls-body">
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                  <span class="today-calls-emoji">📞</span> Total Calls
+                </div>
+                <div class="today-calls-values">
+                  <strong>10668</strong>
+                  | <span>--</span>
+                </div>
+              </div>
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                  <span class="today-calls-emoji" style="color: green;">📲</span> Answered
+                </div>
+                <div class="today-calls-values">
+                  <strong>2841</strong> |
+                  <span>26.63%</span>
+                </div>
+              </div>
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                  <span class="today-calls-emoji" style="color: red;">❌</span> Unanswered
+                </div>
+                <div class="today-calls-values">
+                  <strong>7827</strong> |
+                  <span>73.37%</span>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+          
+          
+  
+          <mat-card class="today-calls-container">
+            <div class="today-calls-header">
+              <span class="today-calls-title">Operational - To day Calls</span>
+              <div class="">
+                <img style="height: 50px;width: 50px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6wBGmgC-z1EfsSb3RKQLQILQG0i1EZBUChQ&s" alt="Settings Icon" class="today-calls-icon" />
+              </div>
+            </div>
+          
+            <div class="today-calls-body">
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                    Live Telecallers
+                </div>
+                <div class="today-calls-values">
+                 | <strong>28 / 39</strong>
+                </div>
+              </div>
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                    Avg Answered Duration
+                </div>
+                <div class="today-calls-values">
+                |  <strong>02:00:47</strong> 
+                </div>
+              </div>
+              <div class="today-calls-row">
+                <div class="today-calls-label">
+                    Avg Working Duration
+                </div>
+                <div class="today-calls-values">
+                |  <strong>03:46:54</strong>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+    </div>
+  </div>
+  

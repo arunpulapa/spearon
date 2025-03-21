@@ -1,0 +1,44 @@
+<nav class="navbar">
+    
+    <ul class="nav-links">
+        <div class="logo">
+            <img src="https://login5.spearon.com/assets/images/logo-dashboard.png" alt="Logo">
+          </div>
+      <li><a href="dashboard" style="margin-left: 10px;">Dashboard</a></li>
+      <li class="dropdown-wrapper" (mouseenter)="toggleDropdown('ccReports', true)" (mouseleave)="toggleDropdown('ccReports', false)">
+        <span><i class="fa fa-headphones"></i> CC Reports</span>
+        <ul class="dropdown" *ngIf="dropdowns['ccReports']">
+          <li><a routerLink="/CallComReport" href="CallComReport"><i class="fa fa-headphones"></i> Calls Complete Report</a></li>
+          <li><a routerLink="/live-monitoring"><i class="fa fa-headphones"></i> Live Monitoring Users/Calls</a></li>
+          <li><a routerLink="/day-wise"><i class="fa fa-headphones"></i> Day Wise Calls Count Report</a></li>
+          <li><a routerLink="/agent-work"><i class="fa fa-headphones"></i> Agent Work Status Report</a></li>
+          <li><a routerLink="/call-report"><i class="fa fa-headphones"></i> Call Report</a></li>
+          <li><a routerLink="/calls-summary"><i class="fa fa-headphones"></i> Calls Summary Report</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-wrapper" (mouseenter)="toggleDropdown('manageUsers', true)" (mouseleave)="toggleDropdown('manageUsers', false)">
+        <span><i class="fa fa-user"></i> Manage Users</span>
+        <ul class="dropdown" *ngIf="dropdowns['manageUsers']">
+          <li><a routerLink="/view-login-agents"><i class="fa fa-user"></i> View Login Agents</a></li>
+          <li><a  href="CreateUser"><i class="fa fa-user"></i> Create User</a></li>
+          <li><a routerLink="/create-agents-group"><i class="fa fa-user"></i> Create Agents Group</a></li>
+          <li><a routerLink="/view-users-list"><i class="fa fa-user"></i> View Users List</a></li>
+          <li><a routerLink="/agent-login-track"><i class="fa fa-user"></i> Agent Login Track</a></li>
+          <li><a routerLink="/hierarchy-view"><i class="fa fa-user"></i> Hierarchy View</a></li>
+        </ul>
+      </li>
+  
+      <!-- Dialer Dropdown -->
+      <li class="dropdown-wrapper" (mouseenter)="toggleDropdown('dialer', true)" (mouseleave)="toggleDropdown('dialer', false)">
+        <span><i class="fa fa-cog"></i> Dialer</span>
+        <ul class="dropdown" *ngIf="dropdowns['dialer']">
+          <li><a href="CreateAutoDailer"><i class="fa fa-cog"></i> Create Auto Dialer</a></li>
+          <li><a routerLink="/auto-dialer-details"><i class="fa fa-cog"></i> Auto Dialer Details</a></li>
+        </ul>
+      </li>
+      <li><span><i class="fa fa-pencil-alt"></i> Dispositions</span></li>
+    </ul>
+    <div class="user-icon">
+      <i class="fa fa-user-circle"></i>
+    </div>
+  </nav>
